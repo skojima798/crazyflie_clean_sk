@@ -91,7 +91,7 @@ bool StateEstimator::LoadParameters(const ros::NodeHandle& n) {
   // Frames of reference.
   if (!nl.getParam("frames/fixed", fixed_frame_id_)) return false;
   if (!nl.getParam("frames/robot", robot_frame_id_)) return false;
-
+  
   // Time step for reading tf.
   if (!nl.getParam("time_step", dt_)) return false;
 
@@ -135,6 +135,14 @@ void StateEstimator::TimerCallback(const ros::TimerEvent& e) {
 
   // Update state.
   Update(translation, euler, right_now);
+
+  // // Publish Euler angles.
+  // geometry_msgs::Vector3Stamped euler_msg;
+  // euler_msg.header.stamp = right_now;
+  // euler_msg.vector.x = euler(0);
+  // euler_msg.vector.y = euler(1);
+  // euler_msg.vector.z = euler(2);
+  // euler_pub_.publish(euler_msg);
 
   // Update the time.
   last_time_ = right_now;

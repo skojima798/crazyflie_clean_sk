@@ -83,8 +83,14 @@ namespace angles {
     const double roll = std::atan2(-R(1,2), R(2,2));
     const double pitch = std::asin (R(0,2));
     const double yaw = std::atan2(-R(0,1), R(0,0));
+    
+    // const double yaw = std::atan2(-R(1,2), R(2,2));
+    // const double pitch = std::asin (R(0,2));
+    // const double roll = std::atan2(-R(0,1), R(0,0));
 
-    return Vector3d(roll, pitch, yaw);
+    return Vector3d(roll, pitch, yaw); //Original
+    //  return Vector3d(-roll, pitch, yaw);
+    // return Vector3d(roll, -pitch, yaw);
   }
 
 } //\namespace angles

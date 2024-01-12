@@ -194,7 +194,7 @@ TakeoffService(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res) {
     msg.control.yaw_dot = 0.0;
 
     // Offset gravity, plus a little extra to lift off.
-    msg.control.thrust = crazyflie_utils::constants::G + 0.2;
+    msg.control.thrust = crazyflie_utils::constants::G + 1.2;
     control_pub_.publish(msg);
 
     // Sleep a little, then rerun the loop.

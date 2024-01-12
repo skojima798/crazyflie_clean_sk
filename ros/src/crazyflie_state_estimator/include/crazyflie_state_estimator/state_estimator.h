@@ -52,6 +52,7 @@
 #include <crazyflie_utils/angles.h>
 
 #include <geometry_msgs/TransformStamped.h>
+#include <geometry_msgs/Vector3Stamped.h>
 #include <tf2_ros/transform_listener.h>
 
 #include <ros/ros.h>

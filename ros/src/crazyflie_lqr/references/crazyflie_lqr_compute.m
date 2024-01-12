@@ -109,7 +109,7 @@ function K = crazyflie_lqr_compute(Q,R,filename,col_separator,row_separator)
 
     if nargin < 2
 	    %			ph  	th  	w   	T
-	    R = diag([	0.1 	0.1 	0.1 	0.1	].^2);
+	    R = diag([	0.5 	0.5 	0.5 	0.5	].^2);
 	elseif min(size(R))<2
         R = diag(R);
     end

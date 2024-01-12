@@ -1,0 +1,35 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_control_merger/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_ros/crazyflie_cpp/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_lqr/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_simulator/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_state_estimator/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_takeoff/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_utils/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_actions/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_controller_gazebo/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_gazebo_plugins/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_interface/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_model/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_quadrotor_pose_estimation/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/hector_quadrotor/hector_uav_msgs/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

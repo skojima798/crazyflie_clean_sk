@@ -1,0 +1,28 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "${default}",
+        "limitSymbolsToIncludedHeaders": false
+      },
+      "includePath": [
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/devel/include/**",
+        "/opt/ros/noetic/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_control_merger/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_ros/crazyflie_cpp/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_lqr/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_simulator/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_state_estimator/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_takeoff/include/**",
+        "/home/sosuke/ros1_ws/crazyflie_clean/ros/src/crazyflie_utils/include/**",
+        "/usr/include/**"
+      ],
+      "name": "ROS",
+      "intelliSenseMode": "gcc-x64",
+      "compilerPath": "/usr/bin/gcc",
+      "cStandard": "gnu11",
+      "cppStandard": "c++14"
+    }
+  ],
+  "version": 4
+}

@@ -1,0 +1,7 @@
+digraph G {
+"world" -> "robot_1"[label="Broadcaster: /natnet_ros\nAverage rate: 120.195 Hz\nMost recent transform: 1703101023.508 ( 0.008 sec old)\nBuffer length: 4.984 sec\n"];
+edge [style=invis];
+ subgraph cluster_legend { style=bold; color=black; label ="view_frames Result";
+"Recorded at time: 1703101023.516"[ shape=plaintext ] ;
+ }->"world";
+}

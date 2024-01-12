@@ -139,7 +139,7 @@ void PositionVelocityYawStateLiftLqr::StateCallback(
   x_rel(3) = rot_x_dot;
   x_rel(4) = rot_y_dot;
 
-  // Wrap angles.
+  // Wrap angles. (converts to range 0-2pi)
   x_rel(6) = crazyflie_utils::angles::WrapAngleRadians(x_rel(6));
 
   // Update integral of position error.
@@ -164,13 +164,13 @@ void PositionVelocityYawStateLiftLqr::StateCallback(
   u(1) = std::max(std::min(u(1), 0.2618), -0.2618);
   u(3) = std::max(std::min(u(3), 16.0), 4.0);
 
-  // Publish.
+  // Publish. 
   crazyflie_msgs::ControlStamped control_msg;
   control_msg.control.roll = u(0);
   control_msg.control.pitch = u(1);
   control_msg.control.yaw_dot = u(2);
   control_msg.control.thrust = u(3);
-
+  control_msg.header.stamp = ros::Time::now(); 
   control_pub_.publish(control_msg);
 }
 
