@@ -4,7 +4,7 @@ import numpy as np
 from std_msgs.msg import Empty
 from crazyflie_msgs.msg import PositionVelocityStateStamped
 
-class waypoint_node:
+class WaypointNode:
     def __init__(self):
         rospy.init_node('cf_waypoint')  # Initialize the ROS node
         rospy.Subscriber('in_flight', Empty, self.waypoint_update)  # Create a subscriber for the topic 'in_flight'
@@ -32,6 +32,6 @@ class waypoint_node:
             rospy.sleep(1)  # let the drone fly to location
 
 if __name__ == '__main__':
-    cf_waypoint_node = waypoint_node()
+    cf_waypoint_node = WaypointNode()
     rospy.spin()  # Keep the node alive
 
