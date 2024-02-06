@@ -78,6 +78,14 @@ bool TakeoffServer::LoadParameters(const ros::NodeHandle& n) {
   if (!nl.getParam("hover/z", init_z)) return false;
   hover_point_ = Vector3d(init_x, init_y, init_z);
 
+  //gravity offset
+  double g_offset;
+  if (!nl.getParam("goffset", g_offset))
+    {
+        ROS_ERROR("Failed to get parameter 'g_offset'.");
+        g_offset = 0.5;
+    }
+
   // Takeoff sequence params.
   if (!nl.getParam("duration/open_loop", open_loop_duration_))
     open_loop_duration_ = 1.0;
@@ -195,7 +203,7 @@ TakeoffService(std_srvs::Empty::Request& req, std_srvs::Empty::Response& res) {
     msg.control.yaw_dot = 0.0;
 
     // Offset gravity, plus a little extra to lift off.
-    msg.control.thrust = crazyflie_utils::constants::G + 0.2;
+    msg.control.thrust = crazyflie_utils::constants::G + g_offset;
     control_pub_.publish(msg);
 
     // Sleep a little, then rerun the loop.

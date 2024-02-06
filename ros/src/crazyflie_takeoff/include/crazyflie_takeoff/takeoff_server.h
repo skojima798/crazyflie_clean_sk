@@ -104,6 +104,7 @@ private:
   // Takeoff sequence params.
   double open_loop_duration_;
   double hover_duration_;
+  double g_offset;
 
   // Timer for refreshing landing control signal.
   ros::Timer timer_;

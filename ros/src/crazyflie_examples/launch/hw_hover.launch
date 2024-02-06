@@ -28,6 +28,11 @@
   <arg name="takeoff_hover_y" default="0.0" />
   <arg name="takeoff_hover_z" default="1.5" />
 
+  <!-- Gravity offset for takeoff-->
+  <arg name="g_offset" default="0.5" />
+  <arg name="open_loop_dur" default="1.0" />
+
+
   <!-- Waypoints -->
   <arg name="waypoints" default="[ [1.0, 1.0, 1.5], [2.0, 1.0, 1.5], [2.0, 2.0, 1.5], [1.0, 1.0, 1.5] , [-1.0, -1.0, 0.5]]" />
 
@@ -101,6 +106,9 @@
     <param name="hover/x" value="$(arg takeoff_hover_x)" />
     <param name="hover/y" value="$(arg takeoff_hover_y)" />
     <param name="hover/z" value="$(arg takeoff_hover_z)" />
+
+    <param name="goffset" value="$(arg g_offset)" />
+    <param name="duration/open_loop" value="$(arg open_loop_dur)" />
   </node>
 
   <!-- Takeoff server node. -->
